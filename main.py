@@ -10,7 +10,7 @@ def main(message):
 @bot.message_handler()
 def main(message):
     try:
-        article = wikipedia.summary(message)
+        article = wikipedia.summary(message.text)
         bot.send_message(message.chat.id, article)
     except:
         bot.send_message(message.chat.id,'Maqola mavjud emas')
